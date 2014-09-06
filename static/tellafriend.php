@@ -114,7 +114,10 @@ $formfriendsname = tep_db_prepare_input($HTTP_POST_VARS['friendsname']);
 $formfriendsemail = tep_db_prepare_input($HTTP_POST_VARS['friendsemail']);
 $formusersname = tep_db_prepare_input($HTTP_POST_VARS['usersname']);
 $formusersemail = tep_db_prepare_input($HTTP_POST_VARS['usersemail']);
+<<<<<<< HEAD
 $url = tep_db_prepare_input($HTTP_POST_VARS['privatekey']);
+=======
+>>>>>>> origin/master
 
 //Variables usually set from Script Smart
 //*******************
@@ -138,7 +141,13 @@ $usersemailsubject = tep_db_prepare_input("Thank you for spreading the word abou
 //NOTE: \r\n in your text emails equals a hard return (or enter) so \r\n\r\n equals 2 of them :)
 
 $usersemailtext =	"Hi =usersname=,\r\n\r\n" .
+<<<<<<< HEAD
 					"Thank you for using our service\r\n\r\n" .
+=======
+					"Thank you for telling a friend about my site.\r\n\r\n" .
+					"I appreciate it, and in return I'd like to give you a special bonus gift.\r\n\r\n" .
+					"You can download it here http://script-smart.com\r\n\r\n" .
+>>>>>>> origin/master
 					"Best wishes,\r\n" .
 					"=ownersname=";
 
@@ -149,9 +158,17 @@ $friendsemailsubject = tep_db_prepare_input("Check This Private Broadcast");
 //NOTE: \r\n in your text emails equals a hard return (or enter) so \r\n\r\n equals 2 of them :)
 
 $friendsemailtext =	"Hi =friendsname=,\r\n\r\n" .
+<<<<<<< HEAD
 					"Check out this link.\r\n\r\n" .
 					"=url=,\r\n" .
 					"It's my private video broadcast \r\n" .
+=======
+					"Check out this great site that I just found.\r\n\r\n" .
+					"http://script-smart.com\r\n\r\n" .
+					"It's got scripts that I know you can use on your \r\n" .
+					"website to make you more money from your sales.\r\n\r\n" .
+					"Cheers\r\n" .
+>>>>>>> origin/master
 					"=usersname=";
 
 //Enter in the thankyou URL that the form will direct the sender to after the form is processed.
@@ -226,7 +243,10 @@ if (isset($formusersemail)) {
 	$friendsmessage = str_replace("=usersname=", $formusersname, $friendsemailtext);
 	$friendsmessage = str_replace("=friendsname=", $formfriendsname, $friendsmessage);
 	$friendsmessage = str_replace("=ownersname=", $ownersname, $friendsmessage);
+<<<<<<< HEAD
 	$friendsmessage = str_replace("=url=", $url, $friendsmessage);
+=======
+>>>>>>> origin/master
 
 	mail($formfriendsname . ' <' . $formfriendsemail . '>',$friendsemailsubject,$friendsmessage,$headers,$fifth);
 //-----------
