@@ -7,10 +7,7 @@
 		<link href="css/bootstrap.min.css" rel="stylesheet" />
         <link href="css/style.css" rel="stylesheet" />
 
-             
-
-
-<style>
+             <style>
             audio, video {
                 -moz-transition: all 1s ease;
                 -ms-transition: all 1s ease;
@@ -58,44 +55,13 @@
         
         <!-- scripts used for broadcasting -->
         <script src="//cdn.webrtc-experiment.com/firebase.js"> </script>
-        <script src="/socket.io/socket.io.js"> </script>
+ <script src="/socket.io/socket.io.js"> </script>
         <script src="//cdn.webrtc-experiment.com/RTCMultiConnection.js"> </script>
-        <link rel="stylesheet" href="//code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">
-        <script src="//code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
-        
-        <script type="text/javascript" language="javascript">
-			$.fx.speeds._default = 1000;
-			$(function() {
-        		$( "#dialog" ).dialog({
-  					autoOpen: false,
- 					 show: "fade",
- 					 hide: "fade",
-				 open: function(event, ui) {
-    				var dlg = $(this);
-    				setTimeout(function(){
-        				dlg.dialog("close");
-        			},
-        		3000);
-        		},
-  				modal: true,
-  				opacity: 1
-				});
-
-
-		$( "#opener" ).click(function() {
-  		$( "#dialog" ).dialog( "open" );
-  		return false;
-});
-    });
-	</script>
-        
-        
-        
 	</head>
 	<body>
-    	<div class="navbar  navbar-inverse navbar-static-top">
+    	<div class="navbar navbar-inverse navbar-static-top">
         	<div class="container">
-            	<div class=""><a href="index.html"><!--<img src="img/private21.png" />--><h2>LIVEBROADCAST.IN</h2></a></div>
+            	<div class=""><a href="index.html"><img src="img/private.png" /></a></div>
             </div>
         </div>
         
@@ -300,7 +266,7 @@ var rtcMultiConnection = new RTCMultiConnection({
         </div>
     
     <br /><br />
-    	<div class="navbar navbar-inverse">
+    	<div class="navbar" style="background-color:rgba(102,102,102,0.5)">
         	<div class="container">
         		<div class="row">
                 <div class="col-md-2">
@@ -319,20 +285,8 @@ var rtcMultiConnection = new RTCMultiConnection({
 	            		<img style="float:right" class="featuredImg" src="img/f4.png" width="20%" />
                     </div>
                 </div>
-                
           	</div>
-            <div class="navbar-default navbar-fixed-bottom">
-        		<div class="container">
-            		<center>
-                    <a href="about.html"><button type="button" class="btn btn-link btn-xs">&nbsp;&nbsp;&nbsp;&nbsp;About&nbsp;&nbsp;&nbsp;&nbsp;</button></a>
-                     <a href="contact.html"><button type="button" class="btn btn-link btn-xs">&nbsp;&nbsp;&nbsp;&nbsp;Contact Us!&nbsp;&nbsp;&nbsp;&nbsp;</button></a>
-                     <a href="disclaimer.html"><button type="button" class="btn btn-link btn-xs">&nbsp;&nbsp;&nbsp;&nbsp;Disclaimer&nbsp;&nbsp;&nbsp;&nbsp;</button></a>
-                    </center>
-            	</div>
-           	</div>
         </div>
-        
-        
         <div class="modal fade" id="sharewith" role="dialog">
         	<div class="modal-dialog">
             	<div class="modal-content">
@@ -340,16 +294,16 @@ var rtcMultiConnection = new RTCMultiConnection({
                     	<h4>Share with</h4>
                     </div>
                     <div class="modal-body">
-                    	
-                        
-                        
-                        
-                        <a href="#mail" data-toggle="modal"><img src="img/gmaillogo.png" width="50px" height="40px" /></a>
-                        
-                        
-                        
-                        
-                        
+                    	<SCRIPT language="javascript">
+function mailpage()
+{
+mail_str = "mailto:?subject= Fill in your subject line here";
+mail_str += "&body= Put a message in the email body here";
+mail_str += " " + parent.location.href;
+location.href = mail_str;
+}
+</SCRIPT>
+<A HREF = "javascript:mailpage()">Email this page to a friend</A></p>
                     </div>
                     <div class="modal-footer">
                     	<a class="btn btn-default" data-dismiss="modal">Close</a>
@@ -357,58 +311,9 @@ var rtcMultiConnection = new RTCMultiConnection({
                 </div>
             </div>
         </div>
-        
-        <!-- Mail -->
-        
-        
-         <div class="modal fade" id="mail" role="dialog" >
-        	<div class="modal-dialog">
-            	<div class="modal-content">
-                	<div class="modal-header">
-                    	<h4>Mail</h4>
-                    </div>
-                    <div class="modal-body">
-                    	
-                                 
-                        
-                        
-                        <form name="tellafriend" action="http://renderfarm3d.net/form/tellafriend.php" method="post" onsubmit="return check_entryform(tellafriend);" target="_blank">
-<table class="table table-responsive" width="" align="center" style=" border:none; margin: 3px; padding: 3px;">
-
-<tr style="border:hidden"><td width="50%" align=""><h5>Senders Name:</h5></td><td align=""><input class="form-control" size="50" name="usersname"></td></tr>
-<tr style="border:hidden"><td align=""><h5>Senders E-mail Address:</h5></td><td align=""><input class="form-control" size="50" name="usersemail"></td></tr>
-<tr style="border:hidden"><td align=""><h5>Receivers Name:</h5></td><td align=""><input class="form-control" size="50" name="friendsname"></td></tr>
-<tr style="border:hidden"><td align=""><h5>Receivers E-mail Address:</h5></td><td align=""><input class="form-control" size="50" name="friendsemail">
-<input type="hidden" id="name" name="privatekey">
-<script type="text/javascript">
-  var a = document.getElementById("name");
-  var b = document.location.href;
-  a.value = b;
-</script></td></tr>
-<tr><td align="">&nbsp;</td><td align="middle"><input class="btn btn-primary" value="Send" name="submit" type="submit"  onclick="setTimeout(function(){
-  $('#mail').modal('hide')
-}, 2000);"></td></tr>
-
-</table>
-</form>
-                        
-
-                        
-                        
-                        
-                    </div>
-                    <div class="modal-footer">
-                    	<a class="btn btn-default" data-dismiss="modal">Close</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <script type='text/javascript' src='formcheck.js'></script>
          <script src="//cdn.webrtc-experiment.com/commits.js" async> </script>
     	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 		<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     	<script src="js/bootstrap.js"></script>
-         
-
 	</body>
 </html>

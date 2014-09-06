@@ -1,0 +1,74 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title></title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+<script src="http://recp.rm04.net//ui/library/formValidate.js" language="javascript"></script>
+<link rel="stylesheet" href="css/ui-lightness/jquery-ui-1.8.16.custom.css" type="text/css" />
+
+<script type="text/javascript" language="javascript">
+$.fx.speeds._default = 1000;
+$(function() {
+        $( "#dialog" ).dialog({
+  autoOpen: false,
+  show: "fade",
+  hide: "fade",
+  open: function(event, ui) {
+    var dlg = $(this);
+    setTimeout(function(){
+        dlg.dialog("close");
+        },
+        3000);
+        },
+  modal: true,
+  opacity: 1
+});
+
+
+$( "#opener" ).click(function() {
+  $( "#dialog" ).dialog( "open" );
+  return false;
+});
+    });
+	</script>
+
+<style>
+body {
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:.7em;
+}
+</style>
+</head>
+<body vlink="" alink="" link="" bgcolor="">
+<div class="demo">
+
+<div id="dialog" title="Basic dialog">
+<p>Email submitted successfully.  Thank you for signing up!</p>
+</div
+><table border="0" cellspacing="0" cellpadding="5">
+<form name="form" method="post" action="http://renderfarm3d.net/form/tellafriend.php">
+<tr>
+<td valign="top"><span style="color:#CC0000">*</span></td>
+<td valign="top" align="left">Email:</td>
+<td><input type="hidden" name="EMAIL_REQUIRED" value="T">
+<input type="hidden" name="EMAIL_DATATYPE" value="email">
+<input type="text" id="name">
+<script type="text/javascript">
+  var a = document.getElementById("name");
+  var b = document.location.href;
+  a.value = b;
+</script></td>
+</tr>
+</form>
+<form>
+<tr>
+<td align="center" colspan="3"><div id="opener"><input type="button" name="submit" value="Submit" onClick="f_validateForm()"></div></td>
+</tr>
+</form>
+</table>
+<p>
+</p>
+<script>f_initializeForm();</script>
+</body>
+</html>
