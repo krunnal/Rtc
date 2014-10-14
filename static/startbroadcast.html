@@ -116,7 +116,7 @@ Thanks!</div>
                     <div class="input-group col-lg-4">
                 	<input type="text" id="broadcast-name" class="form-control" placeholder="Room name" />
                     <span class="input-group-btn">
-                    	<button id="broadcast-all-cameras" class="btn btn-primary">Broadcast</button>
+                    	<button id="broadcast-all-cameras" class="btn btn-primary" disabled>Broadcast</button>
                     </span>
                     <!--<span style="padding-left:30px" class="input-group-btn">
                     	<a style="visibility:hidden" id="share" class="btn btn-primary" href="#sharewith" data-toggle="modal">Share</a>
@@ -125,7 +125,7 @@ Thanks!</div>
                     
                     <br />
                 </div> 
-                <div id="buttons-container"></div>
+                <div id="buttons-container"><span><b><font size="+1">Available devices :</font></span> </div><br />
                     
                 </section>
                 
@@ -320,27 +320,8 @@ document.getElementById('broadcast-all-cameras').onclick = function() {
     	<script src="js/bootstrap.js"></script>
       <style>
 
-button {
-    font-family: Myriad, Arial, Verdana;
-    font-weight: normal;
-    border-top-left-radius: 3px;
-    border-top-right-radius: 3px;
-    border-bottom-right-radius: 3px;
-    border-bottom-left-radius: 3px;
-    padding: 4px 12px;
-    text-decoration: none;
-    color: rgb(27, 26, 26);
-    display: inline-block;
-    box-shadow: rgb(255, 255, 255) 1px 1px 0px 0px inset;
-    text-shadow: none;
-    background: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0.05, rgb(241, 241, 241)), to(rgb(230, 230, 230)));
-    font-size: 20px;
-    border: 1px solid red;
-}
-button[disabled] {
-    background: rgba(216, 205, 205, 0.2);
-    border: 1px solid rgb(233, 224, 224);
-}
+
+
 blockquote {
     font-size: 20px;
     color: rgb(172, 10, 10);
