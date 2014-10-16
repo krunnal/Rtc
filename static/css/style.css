@@ -132,7 +132,7 @@ button, input[type=button] {
 }
 
 button:hover, input[type=button]:hover {
-    background: rgb(9, 147, 240);
+    background:#CCC;
 }
 
 button:active, input[type=button]:active {
