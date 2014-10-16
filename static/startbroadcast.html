@@ -108,7 +108,7 @@ connection.dontCaptureUserMedia = true;
 connection.body = document.getElementById('videos-container');
 
 connection.session = {
-    audio: true,
+    audio: false,
     video: true
 	
 };
@@ -146,11 +146,15 @@ connection.DetectRTC.load(function() {
                 connection.captureUserMedia(function(stream) {
                 connection.attachStreams.push(stream);
 				connection.dontCaptureUserMedia = true;
-                    
-                    if(document.getElementById('broadcast-all-cameras').disabled == true) {
+                    if(window.location.hash) {
+  											
+					if(document.getElementById('broadcast-all-cameras').disabled == true) {
                         document.getElementById('broadcast-all-cameras').disabled = false;
                         document.getElementById('broadcast-all-cameras').style.background = '-webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0.05, rgb(143, 231, 253)), to(rgb(255, 255, 255)))';
                     }
+					}
+					 
+                    
                 });
             };
             buttonsContainer.appendChild(button);
@@ -233,7 +237,7 @@ document.getElementById('broadcast-all-cameras').onclick = function() {
                 
                 </div>
                  <h3 style="font-size:24px">Watch live video streams from anywhere on any device.</h3>
-                  <h4 style="color:#666"><font color="#FF0000">**</font>[ Please open this site in 'Google Chrome' and 'Firefox' only. ]</h4>
+                  <h4 style="color:#666"><font color="#FF0000">**</font>[ Please open this site only in 'Google Chrome' browser. ]</h4>
                 
                
                 
@@ -263,7 +267,7 @@ document.getElementById('broadcast-all-cameras').onclick = function() {
                 </div>
                 
           	</div>
-            <div class="navbar-default navbar-fixed-bottom">
+            <div class="navbar-default">
         		<div class="container">
             		<center>
                     <span style="padding: 10px"><a href="about.html"><font color="#666666"><b>Help</font></a></span>|
