@@ -1,0 +1,217 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+   		<meta name="description" content="CCTVLIVE is a new age video security or business solution to keep track of whats going on at home or at local business place for Free. No signups, no downloads completely secure and real time." />
+   		<meta name="keywords" content="home security, cctv,  cctv solutions, security cameras, online security camera, cctv on mobile,  real time video, surveillance camera, cheap cctv, surveillance cctv, online cctv, security solution" />
+  		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   		<meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="author" content="CCTV Live" />
+
+    	<title>Free CCTV Security Solutions</title>
+		<link href="css/bootstrap.min.css" rel="stylesheet" />
+        <link href="css/style.css" rel="stylesheet" />
+
+             
+
+
+<style>
+            p { padding: 1em; }
+
+            li {
+                border-bottom: 1px solid rgb(189, 189, 189);
+                border-left: 1px solid rgb(189, 189, 189);
+                padding: .5em;
+            }
+             </style>
+        
+           
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">
+        
+	</head>
+	<body>
+   
+    
+    <!--[if IE]>
+
+<div style="width: 100%; border: 1px solid #F7941D; background: #FEEFDA; text-align: center;&quot;&gt; clear: both; height: 75px; position: relative;">
+
+<div style="width: 100%; margin: 0 auto; text-align: left; padding: 0; overflow: hidden; color: black;">
+
+<div style="width: 10%; float: left;"><img alt="Warning!" src="img/ie6nomore-warning.jpg" /></div>
+
+<div style="width: 90%; float: left; font-family : Arial, sans-serif; ">
+
+<div style="font-size: 14px; font-weight: bold; margin-top: 12px;">You are using an obsolete and unsupported browser. For better user experience please switch to <a href="http://www.google.com/chrome">Chrome</a>, <a href="http://getfirefox.com">FireFox</a>.
+
+Thanks!</div>
+
+</div>
+
+</div>
+
+</div>
+
+<![endif]-->
+
+
+    	<div class="navbar  navbar-inverse navbar-static-top">
+        	<div class="container">
+            	<div class=""><a href="index.html"> <img src="img/Arrows-Right-round-icon.png" style="margin-right:5px" height="40px" width="40px" align="left" /><h2>CCTV LIVE</h2></a></div>
+            </div>
+        </div>
+        
+        <div class="container">
+        	<div class="jumbotron">
+            	<center><h1>Welcome to</h1></center>
+                <center><h2>Private & Free security broadcast solution</h2><br /><br />
+                <div class="panel">
+                
+                
+                	<section class="experiment">  <br  />              
+                 <section>
+                 
+                   <span>
+                    
+                       <font style="font-size:18px" color="#0099FF"><b>Click Here!!</b></font>&nbsp;&nbsp;
+                       <img src="img/Arrows-Right-round-icon.png" height="30px" width="30px" align="top" /> 
+                       <a href="" target="_self" title="Open this link. Then your room will be private!"><code><strong id="unique-token"><font style="font-size:22px"><b>#123456789</b></font></strong></code></a>
+                   </span>
+                    <div class="input-group col-lg-4">
+                	<input type="text" style="visibility:hidden" id="broadcast-name" class="form-control" placeholder="Room name" />
+                    <span class="input-group-btn">
+                    	<button style="visibility:hidden" id="setup-new-broadcast" class="btn btn-primary">Broadcast</button>
+                    </span>
+                    <span style="padding-left:30px" class="input-group-btn">
+                    	<a style="visibility:hidden" id="share" class="btn btn-primary" href="#sharewith" data-toggle="modal">Share</a>
+                       
+                    </span>
+                    
+                    <br />
+                </div> 
+                    
+                </section>
+                
+                <!-- list of all available broadcasting rooms -->
+                <table style="width: 100%;" id="rooms-list"></table>
+                
+                <!-- local/remote videos container -->
+                <div id="videos-container"></div>
+            </section>
+             <script>                   
+
+                (function() {
+                    var uniqueToken = document.getElementById('unique-token');
+                    if (uniqueToken)
+                       
+						{
+							/*uniqueToken.parentNode.parentNode.parentNode.innerHTML = '<h2 style="text-align:center;"><a href="' + location.href + '" target="_blank">Share this link</a></h2>';*/
+						
+						//document.getElementById('share').style.visibility = 'visible';
+						//document.getElementById('share').disabled = 'true';
+						
+							uniqueToken.innerHTML  = '#' + (Math.random() * new Date().getTime()).toString(36).toUpperCase().replace( /\./g , '-');
+							uniqueToken.parentNode.parentNode.href = 'startbroadcast.html' + uniqueToken.innerHTML;
+							
+							
+						}
+				})();
+				
+
+               
+            </script>
+                
+                
+                </div>
+                 <h3>Watch live video streams from anywhere on any device.</h3>
+                  <h4 style="color:#666"><font color="#FF0000">**</font>[ Please open this site only in 'Google Chrome' browser. ]</h4>
+                
+               
+                
+                
+            </div>
+        </div>
+    
+    <br /><br />
+    	<div class="navbar-inverse">
+        	<div class="container">
+        		<div class="row">
+                    <div class="col-md-12">
+	            		<img id="workson" style="float:right" class="featuredImg" src="img/f4.png" width="15%" />
+                    </div>
+                </div>
+                
+          	</div>
+            <div class="navbar-default">
+        		<div class="container">
+            		<center>
+                    <span style="padding: 10px"><a href="about.html"><font color="#666666"><b>Help</font></a></span>|
+                     <span style="padding: 10px"><a href="contact.html"><font color="#666666">Contact Us!</font></a></span>|
+                     <span style="padding: 10px"><a href="disclaimer.html"><font color="#666666">Disclaimer</font></a></span>|
+                     <span style="padding: 10px"><a href="cctvlive-faq.html"><font color="#666666">F.A.Q.</font></a></span>
+                    </center>
+                    <center><font style="font-size:11px">
+                    Copyright © 2014 CCTV LIVE, Inc. All rights reserved.</font>
+                    </center>
+            	</div>
+           	</div>
+        </div>
+        <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+		<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    	<script src="js/bootstrap.js"></script>
+               <style>
+            .btn {
+				
+				
+				margin-top: 5px;
+
+			}
+            p { padding: 1em; }
+
+            li {
+                border-bottom: 1px solid rgb(189, 189, 189);
+                border-left: 1px solid rgb(189, 189, 189);
+                padding: .5em;
+            }
+			.experiment p {
+				font-size:18px;
+				padding-bottom: 12px;
+				padding-top: 12px;
+				color:#09F;
+			}
+			
+			@media screen and (max-width:480px) {
+	       
+	               #workson {
+		           width: 40%;
+	              }
+			h4 {
+				font-size: 12px;								
+				}
+			h3 {
+				font-size: 18px;								
+				}
+			.experiment p {
+				font-size:12px;
+				padding-bottom: 4px;
+				padding-top: 4px;
+			}
+			.jumbotron h1 {
+				font-size:24px;
+			}
+			.jumbotron h2 {
+				font-size:18px;
+				border-bottom: 1px solid rgb(92, 92, 92);
+			}
+			.experiment h3 {
+				font-size:18px;
+			}
+			
+			
+            }
+
+
+</style> 
+
+	</body>
+</html>

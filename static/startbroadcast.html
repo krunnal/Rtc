@@ -1,11 +1,17 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<title>Rtc sixsteps</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   		<meta name="description" content="CCTVLIVE is a new age video security or business solution to keep track of whats going on at home or at local business place for Free. No signups, no downloads completely secure and real time." />
+   		<meta name="keywords" content="home security, cctv,  cctv solutions, security cameras, online security camera, cctv on mobile,  real time video, surveillance camera, cheap cctv, surveillance cctv, online cctv, security solution" />
+  		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   		<meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="author" content="CCTV Live" />
+
+    	<title>Free CCTV Security Solutions</title>
 		<link href="css/bootstrap.min.css" rel="stylesheet" />
         <link href="css/style.css" rel="stylesheet" />
+        
         
 
         
@@ -16,10 +22,9 @@
         
         <!-- scripts used for broadcasting -->
         
-        <link rel="stylesheet" href="//code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">
-        <script src="//cdn.webrtc-experiment.com/firebase.js"> </script>
-        <link rel="stylesheet" href="//code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">
-        <script src="//code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+        <link rel="stylesheet" href="js/jquery-ui.css">
+        <script src="js/firebase.js"> </script>
+        <script src="js/jquery-ui.js"></script>
                
 	</head>
 	<body>
@@ -46,94 +51,93 @@ Thanks!</div>
 </div>
 
 <![endif]-->
-
+		<div id="fb-root"></div>
+		<div id="fb-root"></div>
+		<script type="text/javascript">(function(d, s, id) 
+			{
+				var js, fjs = d.getElementsByTagName(s)[0];
+				if (d.getElementById(id)) return;
+				js = d.createElement(s); js.id = id;
+				js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
+				fjs.parentNode.insertBefore(js, fjs);
+			}
+			(document, 'script', 'facebook-jssdk'));
+         </script>
 
     	<div class="navbar  navbar-inverse navbar-static-top">
         	<div class="container">
-            	<div class=""><a href="index.html"><!--<img src="img/private21.png" />--><h2>CCTV LIVE</h2></a></div>
+            	<div class=""><a href="index.html"><img src="img/Arrows-Right-round-icon.png" style="margin-right:5px" height="40px" width="40px" align="left" /><h2>CCTV LIVE</h2></a></div>
             </div>
         </div>
         
         <div class="container">
         	<div class="jumbotron">
-            	<center><h2>Private & Free security broadcast solution</h2><br /><br />
+            	<center><h1>Welcome to</h1></center>
+                <center><h2>Private & Free security broadcast solution</h2><br /><br />
                 <div class="panel">
-                
-                
                 	<section class="experiment">  <br  />              
-                 <section>
-                 
-                   <span>
-                    
-                       <font style="font-size:18px" color="#0099FF"><b>Start Broadcasting!!</b></font>&nbsp;&nbsp;
-                       <img src="img/Arrows-Right-round-icon.png" height="30px" width="30px" align="top" /> 
-                       
-                   </span>
-                    <div class="commented-container input-group col-lg-4">
-                	<input type="text" id="broadcast-name" class="form-control" placeholder="Room name" />
-                    <span class="input-group-btn">
-                    	<button id="broadcast-all-cameras" disabled>Broadcast</button>
-                    </span>
-                    <!--<span style="padding-left:30px" class="input-group-btn">
-                    	<a style="visibility:" id="share" class="btn btn-primary" href="#sharewith" data-toggle="modal">Share</a>
-                       
-                    </span>-->
-                    
-                    <br />
-                </div> 
-                <div id="buttons-container"><span><b><font size="+1">Available devices :</font></span> </div><br />
-              <div id="videos-container">
-                 <!--<video></video><video></video>-->
-                </div>
-                </section>
+                 		<section>
+                    	<span>
+                 	   		<font style="font-size:18px" color="#0099FF"><b>Start Broadcasting!!</b></font>&nbsp;&nbsp;
+                       		<img src="img/Arrows-Right-round-icon.png" height="30px" width="30px" align="top" /> 
+                    	</span>
+                    	<div class="commented-container input-group col-lg-4">
+                			<input type="text" id="broadcast-name" class="form-control" placeholder="Enter a room name" />
+                    		<span class="input-group-btn">
+                    			<button id="broadcast-all-cameras" disabled>Broadcast</button>
+                    		</span>
+                   		<!--<span id="sh1" class="input-group-btn">
+                    			<a id="share" class="btn btn-primary" href="#sharewith" data-toggle="modal">Share</a>
+                        	</span>
+                     	-->
+                    		<br />
+                		</div>
+                    	<span style="line-height:30px"><b><font size="+1">Available devices :</font></span>
+                		<div id="buttons-container" class="thumbnail"> </div>
+                        <!-- local/remote videos container -->
+              			<div id="videos-container">
+                 			<!--<video></video><video></video>-->
+                		</div>
+                	</section>
                 
-                <!-- list of all available broadcasting rooms -->
-                <table class="table-responsive" style="width: 100%;" id="rooms-list"></table>
-                
-                <!-- local/remote videos container -->
-               
-               
-                
-            </section>
-            <script src="//cdn.webrtc-experiment.com/RTCMultiConnection-v2.2.1.js"> </script>
-<script>
-var connection = new RTCMultiConnection();
-
-// connection.getExternalIceServers = false; // optional--remove it.
-// connection.iceServers.length = 1;         // optional--remove it.
-
-connection.dontCaptureUserMedia = true;
-
-// Parent <div> for videos
-connection.body = document.getElementById('videos-container');
-
-connection.session = {
-    audio: false,
-    video: true
-	
-};
-
-connection.direction = 'one-way';
-
-connection.sdpConstraints.mandatory = {
-    OfferToReceiveAudio: true,
-    OfferToReceiveVideo: true
-};
-
-var buttonsContainer = document.getElementById('buttons-container');
-// DetectRTC.load --- to make sure all devices are captured
-// connection.enumerateDevices --- to get list of all captured devices
-connection.DetectRTC.load(function() {
-    connection.enumerateDevices(function(devices) {
-        // iterate over devices-array
-        devices.forEach(function(device) {
-            // skip audio devices
-            if (device.kind.indexOf('audio') != -1) return;
-			 
-			 
-            var button = document.createElement('button');
-            button.id = device.deviceId;
-			var str = device.deviceId;
+                	<!-- list of all available broadcasting rooms -->
+                	<table class="table-responsive" style="width: 100%;" id="rooms-list"></table>
+                	</section>
+            <script src="js/RTCMultiConnection-v2.2.1.js"> </script>
+			<script>
+			var connection = new RTCMultiConnection();
+			// connection.getExternalIceServers = false; // optional--remove it.
+			// connection.iceServers.length = 1;         // optional--remove it.
+			connection.dontCaptureUserMedia = true;
+			
+			// Parent <div> for videos
+			connection.body = document.getElementById('videos-container');
+			
+			connection.session = {
+				audio: false,
+				video: true
+			};
+			
+			connection.direction = 'one-way';
+			
+			connection.sdpConstraints.mandatory = {
+				
+				OfferToReceiveAudio: false,
+				OfferToReceiveVideo: true
+			};
+			
+			var buttonsContainer = document.getElementById('buttons-container');
+			// DetectRTC.load --- to make sure all devices are captured
+			// connection.enumerateDevices --- to get list of all captured devices
+			connection.DetectRTC.load(function() {
+				connection.enumerateDevices(function(devices) {
+					// iterate over devices-array
+					devices.forEach(function(device) {
+						// skip audio devices
+						if (device.kind.indexOf('audio') != -1) return;
+						var button = document.createElement('button');
+						button.id = device.deviceId;
+						var str = device.deviceId;
 			var res = str.substring(0, 4);
            	//button.innerHTML = device.label || device.deviceId;
 			 button.innerHTML = device.label || "Cam_" + res;
@@ -236,7 +240,8 @@ document.getElementById('broadcast-all-cameras').onclick = function() {
                 
                 
                 </div>
-                 <h3 style="font-size:24px">Watch live video streams from anywhere on any device.</h3>
+                 <h3>Watch live video streams from anywhere on any device.</h3>
+                 <div style="margin-bottom:10px" class="fb-like" data-href="http://www.cctvlive.in/" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
                   <h4 style="color:#666"><font color="#FF0000">**</font>[ Please open this site only in 'Google Chrome' browser. ]</h4>
                 
                
@@ -246,23 +251,11 @@ document.getElementById('broadcast-all-cameras').onclick = function() {
         </div>
     
     <br /><br />
-    	<div class="navbar navbar-inverse">
+    	<div class="navbar-inverse">
         	<div class="container">
         		<div class="row">
-                <div class="col-md-2">
-	            		<img class="featuredImg" src="img/f.png" width="100%" />
-                    </div>
-                	<div class="col-md-3">
-	            		<img class="featuredImg" src="img/f11.png" width="100%" />
-                    </div>
-                    <div class="col-md-3">    
-                		<img class="featuredImg" src="img/f21.png" width="100%" />
-                    </div>
-                    <div class="col-md-3">
-	                	<img class="featuredImg" src="img/f31.png" width="100%" />
-                    </div>
-                    <div class="col-md-11">
-	            		<img style="float:right" class="featuredImg" src="img/f4.png" width="20%" />
+                    <div class="col-md-12">
+	            		<img lt="cctv live is a free security solution for homes and small offices. Watch video of home and  office from any place and mobile." id="workson" style="float:right" class="featuredImg" src="img/f4.png" width="15%" />
                     </div>
                 </div>
                 
@@ -272,7 +265,8 @@ document.getElementById('broadcast-all-cameras').onclick = function() {
             		<center>
                     <span style="padding: 10px"><a href="about.html"><font color="#666666"><b>Help</font></a></span>|
                      <span style="padding: 10px"><a href="contact.html"><font color="#666666">Contact Us!</font></a></span>|
-                     <span style="padding: 10px"><a href="disclaimer.html"><font color="#666666">Disclaimer</font></a></span>
+                     <span style="padding: 10px"><a href="disclaimer.html"><font color="#666666">Disclaimer</font></a></span>|
+                     <span style="padding: 10px"><a href="cctvlive-faq.html"><font color="#666666">F.A.Q.</font></a></span>
                     </center>
                     <center><font style="font-size:11px">
                     Copyright © 2014 CCTV LIVE, Inc. All rights reserved.</font>
@@ -292,7 +286,8 @@ document.getElementById('broadcast-all-cameras').onclick = function() {
                         
                         
                         
-                        <a href="#mail" data-toggle="modal"><img src="img/gmaillogo.png" width="50px" height="40px" /></a>
+                        <center><a href="#mail" data-toggle="modal"><img alt="you can share link via email, for remote cctv secured viewing." src="img/gmaillogo.png" width="60px" height="50px" /></a></center>
+                         <h5><i><font color="#333333" style="text-transform:none">**If facing issue with email sharing, copy the url and share it.</font></i></h5>
                         
                         
                         
@@ -316,34 +311,27 @@ document.getElementById('broadcast-all-cameras').onclick = function() {
                     	<h4>Mail</h4>
                     </div>
                     <div class="modal-body">
-                    	
-                                 
-                        
-                        
+                     
                         <form name="tellafriend" action="http://mail-sixsteps.rhcloud.com/tellafriend.php" method="post" onsubmit="return check_entryform(tellafriend);" target="_blank">
-<table class="table table-responsive" width="" align="center" style=" border:none; margin: 3px; padding: 3px;">
+<table class="table table-responsive"  align="center" style=" border:none; margin: 3px; padding: 3px;">
 
-<tr style="border:hidden"><td width="50%" align=""><h5>Senders Name:</h5></td><td align=""><input class="form-control" size="50" name="usersname"></td></tr>
-<tr style="border:hidden"><td align=""><h5>Senders E-mail Address:</h5></td><td align=""><input class="form-control" size="50" name="usersemail"></td></tr>
-<tr style="border:hidden"><td align=""><h5>Receivers Name:</h5></td><td align=""><input class="form-control" size="50" name="friendsname"></td></tr>
-<tr style="border:hidden"><td align=""><h5>Receivers E-mail Address:</h5></td><td align=""><input class="form-control" size="50" name="friendsemail">
+<tr style="border:hidden"><td width="50%" align=""><h5>Senders Name:</h5></td><td><input class="form-control" size="50" name="usersname"></td></tr>
+<tr style="border:hidden"><td><h5>Senders E-mail Address:</h5></td><td><input class="form-control" size="50" name="usersemail"></td></tr>
+<tr style="border:hidden"><td><h5>Receivers Name:</h5></td><td><input class="form-control" size="50" name="friendsname"></td></tr>
+<tr style="border:hidden"><td><h5>Receivers E-mail Address:</h5></td><td><input class="form-control" size="50" name="friendsemail">
 <input type="hidden" id="name" name="privatekey">
 <script type="text/javascript">
   var a = document.getElementById("name");
   var b = document.location.href;
   a.value = b;
 </script></td></tr>
-<tr><td align="">&nbsp;</td><td align="middle"><input class="btn btn-primary" value="Send" name="submit" type="submit"  onclick="setTimeout(function(){
+<tr><td>&nbsp;</td><td><input class="btn btn-primary" value="Send" name="submit" type="submit"  onclick="setTimeout(function(){
   $('#mail').modal('hide')
 }, 2000);"></td></tr>
 
 </table>
 </form>
-                        
-
-                        
-                        
-                        
+               
                     </div>
                     <div class="modal-footer">
                     	<a class="btn btn-default" data-dismiss="modal">Close</a>
@@ -352,12 +340,15 @@ document.getElementById('broadcast-all-cameras').onclick = function() {
             </div>
         </div>
         <script type='text/javascript' src='formcheck.js'></script>
-        <script src="//cdn.webrtc-experiment.com/commits.js" async> </script>
+        <script src="js/commits.js" async> </script>
     	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 		<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     	<script src="js/bootstrap.js"></script>
         <script type="text/javascript" src="js/jquery.uncomment.js"></script>
       <style>
+	  body {
+    		overflow-y:hidden;
+			}
 video {
 	width: 30%;
 	display:block;
@@ -390,6 +381,8 @@ button {
     background: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0.05, rgb(241, 241, 241)), to(rgb(230, 230, 230)));
     font-size: 20px;
     border: 1px solid red;
+	
+	margin-right:2px;
 }
 
 audio  {
@@ -425,7 +418,7 @@ audio  {
             }
 			.commented-container{
 				}
-
+		    
 @media screen and (max-width:480px) {
 
     video {
@@ -446,8 +439,41 @@ audio  {
 	strong {
 		font-size:8px;
 	}
-
-}
+	 #workson {
+		           width: 40%;
+	              }
+			h4 {
+				font-size: 12px;								
+				}
+			h3 {
+				font-size: 18px;								
+				}
+			.experiment p {
+				font-size:12px;
+				padding-bottom: 4px;
+				padding-top: 4px;
+			}
+			.jumbotron h1 {
+				font-size:24px;
+			}
+			.jumbotron h2 {
+				font-size:18px;
+				border-bottom: 1px solid rgb(92, 92, 92);
+			}
+			.experiment h3 {
+				font-size:18px;
+			}
+			.modal-header h4 {
+				font-size:20px;
+				font-weight:bold;
+			}
+			.join {
+				font-size:14px;
+				}
+			..experiment {
+				margin-left: 0em;
+			}
+	}
 
 
 </style>   

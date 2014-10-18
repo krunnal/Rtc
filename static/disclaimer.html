@@ -1,101 +1,22 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<title>Rtc sixsteps</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   		<meta name="description" content="CCTVLIVE is a new age video security or business solution to keep track of whats going on at home or at local business place for Free. No signups, no downloads completely secure and real time." />
+   		<meta name="keywords" content="home security, cctv,  cctv solutions, security cameras, online security camera, cctv on mobile,  real time video, surveillance camera, cheap cctv, surveillance cctv, online cctv, security solution" />
+  		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   		<meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="author" content="CCTV Live" />
+
+    	<title>Free CCTV Security Solutions</title>
 		<link href="css/bootstrap.min.css" rel="stylesheet" />
         <link href="css/style.css" rel="stylesheet" />
-
-             
-
-
-<style>
-            audio, video {
-                -moz-transition: all 1s ease;
-                -ms-transition: all 1s ease;
-                
-                -o-transition: all 1s ease;
-                -webkit-transition: all 1s ease;
-                transition: all 1s ease;
-                vertical-align: top;
-                width: 100%;
-            }
-
-            input {
-                border: 1px solid #d9d9d9;
-                border-radius: 1px;
-                font-size: 2em;
-                margin: .2em;
-                width: 30%;
-            }
-
-            .setup {
-	border-bottom-left-radius: 0;
-	border-top-left-radius: 0;
-	font-size: 102%;
-	height: 47px;
-	margin-left: -9px;
-	margin-top: 8px;
-	position: absolute;
-	top: 235px;
-	left: 237px;
-            }
-
-            p { padding: 1em; }
-
-            li {
-                border-bottom: 1px solid rgb(189, 189, 189);
-                border-left: 1px solid rgb(189, 189, 189);
-                padding: .5em;
-            }
-             </style>
-        
-         <script>
-            document.createElement('article');
-            document.createElement('footer');
-        </script>
-        
-        <!-- scripts used for broadcasting -->
-        <script src="//cdn.webrtc-experiment.com/firebase.js"> </script>
-        <script src="/socket.io/socket.io.js"> </script>
-        <script src="//cdn.webrtc-experiment.com/RTCMultiConnection.js"> </script>
-        <link rel="stylesheet" href="//code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">
-        <script src="//code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
-        
-        <script type="text/javascript" language="javascript">
-			$.fx.speeds._default = 1000;
-			$(function() {
-        		$( "#dialog" ).dialog({
-  					autoOpen: false,
- 					 show: "fade",
- 					 hide: "fade",
-				 open: function(event, ui) {
-    				var dlg = $(this);
-    				setTimeout(function(){
-        				dlg.dialog("close");
-        			},
-        		3000);
-        		},
-  				modal: true,
-  				opacity: 1
-				});
-
-
-		$( "#opener" ).click(function() {
-  		$( "#dialog" ).dialog( "open" );
-  		return false;
-});
-    });
-	</script>
-        
-        
         
 	</head>
 	<body>
     	<div class="navbar  navbar-inverse navbar-static-top">
         	<div class="container">
-            	<div class=""><a href="index.html"><!--<img src="img/private21.png" />--><h2>CCTV LIVE</h2></a></div>
+            	<div class=""><a href="index.html"><h2>CCTV LIVE</h2></a></div>
             </div>
         </div>
         
@@ -108,17 +29,18 @@
                 	<div class="panel">
                     
                 		<div class="experiment">
-                    		<p style="font-size:16px">The content of this site is intended solely to provide information, by using the related regulations that currently apply, as a reference to such information. This site is not intended for business purposes or to provide legal advice. You are not allowed to take any legal action based on the information contained in this site without first seeking the advice of a lawyer or professional consultants.                       
+                    		<p>The content of this site is intended solely to provide information, by using the related regulations that currently apply, as a reference to such information. This site is not intended for business purposes or to provide legal advice. You are not allowed to take any legal action based on the information contained in this site without first seeking the advice of a lawyer or professional consultants.                       
                             </p>
-                            <p style="font-size:16px">
-                            You specifically agree that Livebroadcast.in shall not be responsible for any unauthorized access to or alteration of your transmissions or data, any material or data sent or received or not sent or received, or any transactions entered into through a Livebroadcast.in site/ services. You specifically agree that Cricinfo Live Streaming is not responsible or liable for any threatening, defamatory, obscene, offensive or illegal content or conduct of any other party or any infringement of another's rights, including intellectual property rights.
+                            <p>
+                            You specifically agree that CCTV Live shall not be responsible for any unauthorized access to or alteration of your transmissions or data, any material or data sent or received or not sent or received, or any transactions entered into through a CCTV Live site/ services. You specifically agree that CCTV Live is not responsible or liable for any threatening, defamatory, obscene, offensive or illegal content or conduct of any other party or any infringement of another's rights, including intellectual property rights.
+
                             </p>
-                            <p style="font-size:16px">You specifically agree that Livebroadcast is not responsible for any content sent using and/or included in a Livebroadcast site/ services by any third party.
+                            <p>You specifically agree that CCTV Live is not responsible for any content sent using and/or included in a CCTV Live site/ services by any third party.
                             </p>
-                            <p style="font-size:16px">Livebroadcast reserves the right to disclose any personal information about you or your use of the Livebroadcast sites/services, including its contents.
+                            <p>CCTV Live reserves the right to disclose any personal information about you or your use of the CCTV Live sites/services, including its contents. 
                             </p>
-                            <p style="font-size:16px">
-                            Because Livebroadcast media content is streamed over the internet, several factors, including your viewing computer device system resources as well as your internet connection speed bandwidth, affect the quality of your live media viewing experience.
+                            <p>
+                           Because CCTV Live media content is streamed over the internet, several factors, including your viewing computer device system resources as well as your internet connection speed bandwidth, affect the quality of your live media viewing experience.
                             </p>
                     	</div>
                     </div>
@@ -130,35 +52,14 @@
         </div>
     
     <br /><br />
-    	<!--<div class="navbar" style="background-color:rgba(92,92,92,1)">
-        	<div class="container">
-        		<div class="row">
-                <div class="col-md-2">
-	            		<img class="featuredImg" src="img/f.png" width="100%" />
-                    </div>
-                	<div class="col-md-3">
-	            		<img class="featuredImg" src="img/f11.png" width="100%" />
-                    </div>
-                    <div class="col-md-3">    
-                		<img class="featuredImg" src="img/f21.png" width="100%" />
-                    </div>
-                    <div class="col-md-3">
-	                	<img class="featuredImg" src="img/f31.png" width="100%" />
-                    </div>
-                    <div class="col-md-11">
-	            		<img style="float:right" class="featuredImg" src="img/f4.png" width="20%" />
-                    </div>
-                </div>
-          	</div>
-            
-        </div> -->
-        
+    	       
         <div class="navbar-default">
         		<div class="container">
             		<center>
                     <span style="padding: 10px"><a href="index.html"><font color="#666666"><b>Home</font></a></span>|
                      <span style="padding: 10px"><a href="about.html"><font color="#666666">Help</font></a></span>|
-                     <span style="padding: 10px"><a href="contact.html"><font color="#666666">Contact Us!</font></a></span>
+                     <span style="padding: 10px"><a href="contact.html"><font color="#666666">Contact Us!</font></a></span>|
+                     <span style="padding: 10px"><a href="cctvlive-faq.html"><font color="#666666">F.A.Q.</font></a></span>
                     </center>
                     <center><font style="font-size:11px">
                     Copyright © 2014 CCTV LIVE, Inc. All rights reserved.</font>
@@ -167,12 +68,41 @@
            	</div>
        
         
-         <script type='text/javascript' src='formcheck.js'></script>
-         <script src="//cdn.webrtc-experiment.com/commits.js" async> </script>
-    	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-		<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+        
     	<script src="js/bootstrap.js"></script>
-         
+       
+        <style>
+        .experiment p {
+				font-size:16px;
+				padding-bottom: 12px;
+				padding-top: 12px;
+				
+			}
+			@media screen and (max-width:480px) {
+	        strong {
+		             font-size:8px;
+	               }
+	               #workson {
+		           width: 40%;
+	              }
+			h4 {
+				font-size: 12px;								
+				}
+			h3 {
+				font-size: 18px;								
+				}
+			.jumbotron h2 {
+				font-size: 18px;								
+				}	
+			.experiment p {
+				font-size:12px;
+				padding-bottom: 4px;
+				padding-top: 4px;
+				margin-top: 10px;
+			}
+
+            }
+		</style>  
 
 	</body>
 </html>
